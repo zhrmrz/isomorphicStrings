@@ -1,0 +1,17 @@
+class Sol:
+    def isomorphicStrings(self,s,t):
+        list=[]
+        for char in s:
+            if char in list:
+                idx1=list.index(char)
+                idx2=len(list)
+                if t[idx1]!=t[idx2]:
+                    return False
+                    break
+            list.append(char)
+        return True
+
+
+if __name__ == '__main__':
+    p1=Sol()
+    print(p1.isomorphicStrings('fook','bool'))
